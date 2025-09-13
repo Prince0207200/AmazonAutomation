@@ -27,7 +27,7 @@ public class CartPage {
     	  WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nav-cart")));
     	  String currentWindow = driver.getWindowHandle();
       	System.out.println("current window:"+currentWindow);
-          // Scroll into view with JS instead of Actions
+        
           ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", ele);
 
           System.out.println("scroll back");
@@ -41,30 +41,30 @@ public class CartPage {
     	    String currentWindow2 = driver.getWindowHandle();
         	System.out.println("current window2:"+currentWindow2);
         	driver.findElement(By.xpath("//input[@name='ppw-instrumentRowSelection' and @value='SelectableAddCreditCard']")).click();
-        	System.out.println("radio");
+        	System.out.println("radio btn");
         	
 
         	
 
-        	// 2. Click "Add a new credit or debit card"
+        	
         	WebElement addCardLink = wait.until(ExpectedConditions.elementToBeClickable(
         	        By.xpath("//a[contains(text(),'Add a new credit or debit card')]")
         	));
         	addCardLink.click();
         	System.out.println("Clicked 'Add a new credit or debit card'");
 
-        	// 3. Wait for popup iframe to appear
+        	
         	WebElement iframe = wait.until(ExpectedConditions.presenceOfElementLocated(
         	        By.cssSelector("iframe.apx-secure-iframe")
         	));
         	driver.switchTo().frame(iframe);
         	System.out.println("Switched to credit card iframe");
         	
-        	// 4. Fill in card details
+        
         	WebElement cardNumber = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name=\"addCreditCardNumber\" and @type=\"tel\"]")));
-        	cardNumber.sendKeys("4111111111111111");
+        	cardNumber.sendKeys(props.getProperty("cardNo"));
         	System.out.println("Filled Card credential");
-        	//5 continue
+        	
         	WebElement contniueBtn = wait.until(ExpectedConditions.elementToBeClickable(
         	        By.xpath("//span[@class=\"a-button-inner\"]/input[@name=\"ppw-widgetEvent:AddCreditCardEvent\"]")
         	));

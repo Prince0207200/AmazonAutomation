@@ -29,6 +29,8 @@ public class LoginPage {
 
         driver.findElement(By.id("ap_password")).sendKeys(props.getProperty("password"));
         System.out.println("password recieved is "+props.getProperty("password"));
+        
+        
         driver.findElement(By.id("signInSubmit")).click();
         System.out.println("submit btn is clicked and user is now Logged in");
     }

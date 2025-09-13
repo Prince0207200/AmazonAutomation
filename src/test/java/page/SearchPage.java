@@ -16,8 +16,8 @@ public class SearchPage {
 
     public void searchProduct() {
     	System.out.println("entered in search product page");
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys(props.getProperty("searchProduct"));
-        System.out.println("search input send is"+props.getProperty("searchProduct"));
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("bag");
+        System.out.println("search input send is bag");
         
         driver.findElement(By.id("nav-search-submit-button")).click();
         System.out.println("click on submit after writing search product");

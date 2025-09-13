@@ -25,6 +25,6 @@ public class FlowOfTest extends BaseTest {
         CartPage cartPage = new CartPage(driver, props);
         cartPage.addToCartAndCheckout();
 
-        System.out.println("✅ User journey completed till checkout page.");
+        System.out.println("User journey completed till checkout page card detail submition.");
     }
 }

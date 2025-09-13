@@ -26,24 +26,21 @@ public class SelectProductPage {
     }
 
     public void selectFirstProduct() {
-    	System.out.println("select page ");
+    	System.out.println("SELECT PAGE :");
     
     	
-    	String currentWindow = driver.getWindowHandle();
-    	System.out.println("current window:"+currentWindow);
+    	
     	
        
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"a-autoid-6-announce\"]")));
+        WebElement elementBag = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"a-autoid-6-announce\"]")));
 
-        // Scroll into view with JS instead of Actions
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementBag);
 
         System.out.println("scroll");
-        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(elementBag)).click();
  	 
-        String currentWindow1 = driver.getWindowHandle();
-    	System.out.println("current window1:"+currentWindow1);
         
         System.out.println("selected product");
         
