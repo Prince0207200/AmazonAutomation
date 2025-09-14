@@ -4,7 +4,7 @@ This project demonstrates end-to-end automation of a user journey flow on Amazon
 It covers login, product search, product selection, add-to-cart, checkout, and dummy payment details entry.
 
 🔹 Project structure
-![ProjectStructure](screenshots/productStructure.png)
+![ProjectStructure](screenshots/pomStructure.png)
 
 🎯 Goal
 
