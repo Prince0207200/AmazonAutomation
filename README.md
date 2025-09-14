@@ -3,6 +3,9 @@
 This project demonstrates end-to-end automation of a user journey flow on Amazon using Java, Selenium WebDriver, and TestNG.
 It covers login, product search, product selection, add-to-cart, checkout, and dummy payment details entry.
 
+🔹 Project structure
+![ProjectStructure](screenshots/productStructure.png)
+
 🎯 Goal
 
 To automate a complete user flow on an e-commerce platform as part of the JungleWorks Automation Assignment.
@@ -79,13 +82,24 @@ Enters dummy card details
 
 Logs messages in console for each step
 
+
+## 📸 Proof of Execution
+
+🔹 ConsoleLog  
+![ConsoleLog](screenshots/consolelog.png)
+
+
+
+
+
+
 📸 Deliverables
 
 GitHub Link – https://github.com/Prince0207200/AmazonAutomation
 
 README – Setup & execution guide (this file)
 
-Video Recording – Script execution & automation flow
+Video Recording – https://drive.google.com/file/d/1X08GARW6MHy4RS99sAEJOzVUrVuaFXMO/view?usp=sharing
 
 Code Quality – Can be re-run on any system with minimal config changes
 
